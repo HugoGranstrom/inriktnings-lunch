@@ -152,7 +152,13 @@ slide:
   nbText: hlMd"""
 Lycka till med era studier!
 """
-  fitImage("spiderPointing.jpg")
+  columns:
+    column:
+      nbImage("spiderPointing.jpg")
+    column:
+      nbText: "Slides:"
+      fitImage("qr.png")
+      nbText: "hugogranstrom.github.io/inriktnings-lunch/"
 
 
 nbSave
