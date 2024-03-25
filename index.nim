@@ -122,21 +122,6 @@ for (c, i, rec) in courses:
 
 slide:
   slide:
-    nbText: "## Kurser"
-  #slide:
-  #  nbText: uncoloredList
-  slide:
-    nbText: coloredList
-  slide:
-    nbText: censoredList
-  slide:
-    columns:
-      for l in groupedCensored.reversed():
-        column:
-          nbText: l
-
-slide:
-  slide:
     nbText: "# Tips"
   slide:
     nbText: hlMd"""
@@ -158,7 +143,32 @@ Lycka till med era studier!
     column:
       nbText: "Slides:"
       fitImage("qr.png")
-      nbText: "hugogranstrom.github.io/inriktnings-lunch/"
+  nbText: "hugogranstrom.github.io/inriktnings-lunch/"
 
+slide:
+  slide:
+    nbText: "# Bonusmaterial"
+  slide:
+    nbText: """
+## Kurser
+- Grön: direkt användbar i mitt jobb
+- Vit: inte direkt användbar, men glad att jag läste den
+- Röd: kunde lika gärna ha skippat den (om dom inte varit obligatoriska...)
+"""
+  #slide:
+  #  nbText: uncoloredList
+  slide:
+    nbText: coloredList
+#[   slide:
+    nbText: censoredList
+  slide:
+    columns:
+      for l in groupedCensored.reversed():
+        column:
+          nbText: l ]#
 
+  slide: nbText: "# Bonus-memes"
+  for link in ["flameDog.jpg", "monkey.jpg", "oneDoesNot.jpg", "reactionMan.jpg"]:
+    slide:
+      fitImage(link)
 nbSave
